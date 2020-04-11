@@ -8,6 +8,9 @@ test.data <- readxl::read_xlsx(here::here('data/sample-xlsx-file-for-testing.xls
 # show basic structure of the dataframe just created
 head(test.data)
 
+#count occurrences of each factor(instance of a variable) in a column using 'table' function
+sector.summary.data <- as.data.frame(table(test.data$Segment))
+
 # how you take the mean of a dataframe column, indexing using $NAME (or by column number, see below)
 print(c('Mean of manufacturing price is',mean(test.data$`Manufacturing Price`)))
 
