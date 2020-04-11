@@ -2,6 +2,8 @@ require(here)
 
 # sample data file
 test.data <- readxl::read_xlsx(here::here('data/sample-xlsx-file-for-testing.xlsx'))
+# further use specifying which sheet to read from and how to use column names if present
+# test.data <- readxl::read_xlsx(here::here('some_file.xlsx'),sheet = 'Applications', col_names = TRUE)
 
 # show basic structure of the dataframe just created
 head(test.data)
